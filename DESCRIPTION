@@ -1,0 +1,10 @@
+Package: sacbox
+Description: R functions commonly used.
+Title: sacbox
+Version: 0.0.0
+Date: 06-30-12
+License: CC0
+Author: Scott Chamberlain
+Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Collate:
+    'unnest.r'

@@ -1,0 +1,36 @@
+\name{unnest}
+\alias{unnest}
+\title{Unnest a nested list.}
+\usage{
+  unnest(x)
+}
+\arguments{
+  \item{x}{A nested list.}
+}
+\value{
+  A list, with no nesting, hopefully.
+}
+\description{
+  Unnest a nested list.
+}
+\examples{
+\dontrun{
+# a nested list
+mylist <- list(); mylist_ <- list()
+for(i in 1:5) {
+   for(j in 1:5) {
+     mylist[[j]] <- i*j
+   }
+   mylist_[[i]] <- mylist
+ }
+
+# Unnest the list
+unnest(mylist_)[[1]]
+}
+}
+\author{
+  Scott Chamberlain \email{myrmecocystus@gmail.com}
+}
+\keyword{list}
+\keyword{nested}
+

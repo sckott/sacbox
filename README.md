@@ -1,4 +1,5 @@
 sacbox
-======
+=======
 
-Library of R functions from me and others
+R functions often needed...It gets old looking for that function you sometimes, or often, need but can't remember where you put it. Now I can just load these as I would an R package, with roxygen documentation with examples.  This makes any research that uses these functions reproducible since they are open for all to use. 
+
