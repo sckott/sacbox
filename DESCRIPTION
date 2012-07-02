@@ -9,3 +9,4 @@ Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 Collate:
     'unnest.r'
     'colClasses.r'
+    'renamefiles.r'

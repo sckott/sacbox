@@ -1,2 +1,5 @@
 export(colClasses)
+export(renamefiles)
 export(unnest)
+import(plyr)
+import(stringr)
