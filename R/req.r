@@ -4,5 +4,7 @@
 #' @examples
 #' req(list("XML", "doMC", "plyr", "RCurl", "stringr"))
 req <- function(x) {
-  lapply(x, require, character.only=T)
+  lapply(x, FUN = function(X) {
+    do.call("require", list(X)) 
+  })
 }
