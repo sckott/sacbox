@@ -1,0 +1,8 @@
+#' Easy require/library.
+#' 
+#' @param x Vector of quoted package names to load. 
+#' @examples
+#' req(list("XML", "doMC", "plyr", "RCurl", "stringr"))
+req <- function(x) {
+  lapply(x, require, character.only=T)
+}

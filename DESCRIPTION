@@ -10,3 +10,4 @@ Collate:
     'unnest.r'
     'colClasses.r'
     'renamefiles.r'
+    'req.r'
