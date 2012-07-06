@@ -1,5 +1,6 @@
 export(colClasses)
 export(renamefiles)
+export(req)
 export(unnest)
 import(plyr)
 import(stringr)
