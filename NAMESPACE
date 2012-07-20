@@ -1,6 +1,8 @@
 export(colClasses)
+export(knitpost)
 export(renamefiles)
 export(req)
 export(unnest)
+import(knitr)
 import(plyr)
 import(stringr)

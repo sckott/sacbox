@@ -11,3 +11,4 @@ Collate:
     'colClasses.r'
     'renamefiles.r'
     'req.r'
+    'knitpost.r'
