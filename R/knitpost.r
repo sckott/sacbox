@@ -7,7 +7,7 @@
 #' @param base.url Leave as default.
 #' @examples \dontrun{ 
 #' setwd("/Users/ScottMac/github/SChamberlain/schamberlain.github.com/_posts")
-#' knitpost("/Users/ScottMac/github/SChamberlain/schamberlain.github.com/_drafts/2012-01-20-global-names-resolver.Rmd")
+#' knitpost("/Users/ScottMac/github/SChamberlain/schamberlain.github.com/_drafts/2012-07-20-global-names-resolver.Rmd")
 #' }
 #' @export
 knitpost <- function(input, base.url = "/") 
