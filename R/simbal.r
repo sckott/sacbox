@@ -35,8 +35,8 @@ simbal <- function(t, metric = "colless", n)
 		t_unbal <- NULL
 		xx <- as.treeshape(x) # convert trees to aptreeshape format trees
 		c_ <- colless(xx, "yule") # calculate colless' metric
-		if(c_ < 1){ t_bal <- I(x) } else
-			if(c_ > 1) { t_unbal <- I(x) } # returns tree if less than some level of balance	
+		if(c_ < 0){ t_bal <- I(x) } else
+			if(c_ > 0) { t_unbal <- I(x) } # returns tree if less than some level of balance	
 		end
 		compact(list(colstat = c_, colless_bal = t_bal, colless_unbal = t_unbal))
 	}
