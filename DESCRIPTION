@@ -12,6 +12,7 @@ Collate:
     'renamefiles.r'
     'req.r'
     'knitpost.r'
+    'simbal.r'
 Depends:
     knitr,
     stringr,
