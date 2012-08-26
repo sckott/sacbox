@@ -41,15 +41,15 @@ simbal <- function(t, metric = "colless", n)
 		compact(list(colstat = c_, colless_bal = t_bal, colless_unbal = t_unbal))
 	}
 	
-	if(metrics == "beta"){
+	if(metric == "beta"){
 		betalist <- lapply(trees, beta)
 		collesslist <- NULL
 	} else
-		if(metrics == "colless"){
+		if(metric == "colless"){
 			betalist <- NULL
 			collesslist <- lapply(trees, colless_)
 		} else
-			stop("metrics must be one of 'beta' or 'colless'")
+			stop("metric must be one of 'beta' or 'colless'")
 	
 	compact(list(betalist, collesslist))[[1]]
 }
