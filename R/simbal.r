@@ -2,18 +2,22 @@
 #' 
 #' @import ape phytools apTreeshape plyr
 #' @param t Number of tips (i.e., species)
-#' @param metrics Methods to use to generate trees
+#' @param metric Methods to use to generate trees, one of "colless" or "beta" (see details).
 #' @param n Number of trees to produce
-#' @return List of length n, of two element lists (element one is the balance 
+#' @return List of length n, each elemen of two parts (one is the balance 
 #' 		metric, and the other is the phylogeny)
+#' @details See the \code{apTreeshape} package for a description of the beta-splitting 
+#' 		metric. Both Colless' metric and beta describe the extent to which a tree is 
+#' 		balanced or not. 
 #' @examples 
-#' simbal(t = 10, metrics = "beta", n = 20)
-#' out <- simbal(t = 10, metrics = "colless", n = 20) # run it
+#' # Simulate 20 trees, each with 10 tips (=species), then pull out trees and metrics
+#' out <- simbal(t = 10, metric = "colless", n = 20) # run it
 #' as.numeric(sapply(out, "[", "colstat")) # get the balance metric values
 #' compact(lapply(out, function(x) x$colless_bal)) # get the balanced trees
 #' compact(lapply(out, function(x) x$colless_unbal)) # get the unbalanced trees
 #' @export
-simbal <- function(t, metrics, n) {
+simbal <- function(t, metric = "colless", n) 
+{
 	trees <- replicate(n, rcoal(t), simplify=F) # make a tree with n species
 
 	beta <- function(x) {
