@@ -11,12 +11,12 @@
 #' 		balanced or not. 
 #' @examples 
 #' # Simulate 20 trees, each with 10 tips (=species), then pull out trees and metrics
-#' out <- simbal(t = 10, metric = "colless", n = 20) # run it
+#' out <- simbal(t = 10, metric = "colless", n = 20, cutlow = -0.5, cuthigh = 0.5) # run it
 #' as.numeric(sapply(out, "[", "colstat")) # get the balance metric values
 #' compact(lapply(out, function(x) x$colless_bal)) # get the balanced trees
 #' compact(lapply(out, function(x) x$colless_unbal)) # get the unbalanced trees
 #' @export
-simbal <- function(t, metric = "colless", n) 
+simbal <- function(t = 10, metric = "colless", n = 10, cutlow, cuthigh) 
 {
 	trees <- replicate(n, rcoal(t), simplify=F) # make a tree with n species
 
@@ -25,8 +25,8 @@ simbal <- function(t, metric = "colless", n)
 		t_unbal <- NULL
 		xx <- as.treeshape(x) # convert trees to aptreeshape format trees
 		b <- maxlik.betasplit(xx)[[1]] # calculate beta for all trees
-		if(b < 1){ t_bal <- I(x) } else
-			if(b > 1) { t_unbal <- I(x) } # returns tree if less than some level of balance	
+		if(b < cutlow){ t_bal <- I(x) } else
+			if(b > cuthigh) { t_unbal <- I(x) } # returns tree if less than some level of balance	
 				end
 		compact(list(beta = b, beta_bal = t_bal, beta_unbal = t_unbal))
 	}
@@ -35,9 +35,9 @@ simbal <- function(t, metric = "colless", n)
 		t_unbal <- NULL
 		xx <- as.treeshape(x) # convert trees to aptreeshape format trees
 		c_ <- colless(xx, "yule") # calculate colless' metric
-		if(c_ < 0){ t_bal <- I(x) } else
-			if(c_ > 0) { t_unbal <- I(x) } # returns tree if less than some level of balance	
-		end
+		if(c_ < cutlow){ t_bal <- x } else
+			if(c_ > cuthigh) { t_unbal <- x } # returns tree if less than some level of balance	
+				end
 		compact(list(colstat = c_, colless_bal = t_bal, colless_unbal = t_unbal))
 	}
 	
