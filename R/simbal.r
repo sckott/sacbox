@@ -1,9 +1,12 @@
 #' Simulate balanced and unbalanced trees.
 #' 
 #' @import ape phytools apTreeshape plyr
-#' @param t Number of tips (i.e., species)
-#' @param metric Methods to use to generate trees, one of "colless" or "beta" (see details).
-#' @param n Number of trees to produce
+#' @param t Number of tips (i.e., species). Defaults to 10 tips.
+#' @param metric Methods to use to generate trees, one of "colless" or "beta" (see details). 
+#' 		Defaults to "colless".
+#' @param n Number of trees to produce. Defaults to 10 trees.
+#' @param cutlow Value at which to filter trees on the low (e.g., unbalanced) side of the metric. 
+#' @param cuthigh Value at which to filter trees on the high (e.g., balanced) side of the metric.
 #' @return List of length n, each elemen of two parts (one is the balance 
 #' 		metric, and the other is the phylogeny)
 #' @details See the \code{apTreeshape} package for a description of the beta-splitting 
