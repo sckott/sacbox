@@ -13,6 +13,8 @@ Collate:
     'req.r'
     'knitpost.r'
     'simbal.r'
+    'capwords.r'
+    'simtraits.r'
 Depends:
     knitr,
     stringr,
