@@ -15,6 +15,7 @@ Collate:
     'simbal.r'
     'capwords.r'
     'simtraits.r'
+    'simbaltrees.r'
 Depends:
     knitr,
     stringr,
