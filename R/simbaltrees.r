@@ -18,13 +18,13 @@
 simbaltrees <- function(tips, metric, numtrees, cutlow, cuthigh) {
 	
 	trees_colless_plants <- simbal(t=tips, metric=metric, n=numtrees, cutlow = cutlow, cuthigh = cuthigh)
-	trees_colless_plants_bal <- out$bal # get the balanced trees
-	trees_colless_plants_unbal <- out$unbal # get the unbalanced trees
+	trees_colless_plants_bal <- trees_colless_plants$bal # get the balanced trees
+	trees_colless_plants_unbal <- trees_colless_plants$unbal # get the unbalanced trees
 	
 	### animal trees
 	trees_colless_anim <- simbal(t=tips, metric=metric, n=numtrees, cutlow = cutlow, cuthigh = cuthigh)
-	trees_colless_anim_bal <- out$bal # get the balanced trees
-	trees_colless_anim_unbal <- out$unbal # get the unbalanced trees
+	trees_colless_anim_bal <- trees_colless_anim$bal # get the balanced trees
+	trees_colless_anim_unbal <- trees_colless_anim$unbal # get the unbalanced trees
 	
 	################## Simulate traits on each tree
 	# Plants
