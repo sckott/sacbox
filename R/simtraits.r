@@ -1,6 +1,7 @@
 #' Simulate traits on each tree.
 #' 
-#' @import plyr phytools
+#' @import plyr
+#' @importFrom phytools fastBM
 #' @param trees List of phylogenetic trees in "phylo" format. 
 #' @param numtraits Number of traits to create.
 #' @param method Method to simulate traits on a phylogeny, one of fastBM, etc. 
