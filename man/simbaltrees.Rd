@@ -2,7 +2,7 @@
 \alias{simbaltrees}
 \title{Simulate a set of balanced and unbalanced trees.}
 \usage{
-  simbaltrees(tips, metric, numtrees, cutlow, cuthigh)
+  simbaltrees(tips = 10, metric, numtrees, cutlow, cuthigh)
 }
 \arguments{
   \item{tips}{}
@@ -26,7 +26,8 @@
 }
 \examples{
 \dontrun{
-simbaltrees(tips=10, metric="beta", numtrees=10, cutlow=-0.5, cuthigh=0.5)
+temp <- simbaltrees(tips=10, metric="colless", numtrees=10, cutlow=-0.5, cuthigh=0.5)
+unique(temp$model)
 }
 }
 

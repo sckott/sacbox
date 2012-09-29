@@ -16,7 +16,11 @@ Collate:
     'capwords.r'
     'simtraits.r'
     'simbaltrees.r'
+    'lakedata.r'
 Depends:
     knitr,
     stringr,
-    plyr
+    plyr,
+    RCurl,
+    XML
+
