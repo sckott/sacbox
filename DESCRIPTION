@@ -10,12 +10,9 @@ Collate:
     'unnest.r'
     'colClasses.r'
     'renamefiles.r'
-    'req.r'
     'knitpost.r'
-    'simbal.r'
     'capwords.r'
     'simtraits.r'
-    'simbaltrees.r'
     'lakedata.r'
 Depends:
     knitr,
@@ -23,4 +20,3 @@ Depends:
     plyr,
     RCurl,
     XML
-
