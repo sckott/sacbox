@@ -14,6 +14,7 @@ Collate:
     'capwords.r'
     'simtraits.r'
     'lakedata.r'
+    'write_fasta.r'
 Depends:
     knitr,
     stringr,
