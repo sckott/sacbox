@@ -3,13 +3,15 @@
 #' 
 #' @param sequences A list of sequences. 
 #' @param fileout A file to write to, e.g., mysequences.fas
-#' @examples 
+#' @examples \dontrun{
 #' # Note that they are all the same sequence
 #' myseqs <- c("TCTTATTTACAATAGGAGGATTATCAGGAATTATATTATCAAATTCATCTATTGATATTATACTACACGATACTTATTACGTTATTGGACACTTTCATTATGTACTCTCAATA",
 #' 		"TCTTATTTACAATAGGAGGATTATCAGGAATTATATTATCAAATTCATCTATTGATATTATACTACACGATACTTATTACGTTATTGGACACTTTCATTATGTACTCTCAATA",
 #' 		"TCTTATTTACAATAGGAGGATTATCAGGAATTATATTATCAAATTCATCTATTGATATTATACTACACGATACTTATTACGTTATTGGACACTTTCATTATGTACTCTCAATA")
 #' names(myseqs) <- c("Apis_mellifera","Homo sapiens","Helianthus annuus")
 #' write_fasta(myseqs, "myseqs.fas")
+#' }
+#' @export
 write_fasta <- function (sequences, fileout) 
 {
 	outfile <- file(description = fileout, open = "w")
