@@ -15,6 +15,7 @@ Collate:
     'simtraits.r'
     'lakedata.r'
     'write_fasta.r'
+    'timetests.r'
 Depends:
     knitr,
     stringr,
