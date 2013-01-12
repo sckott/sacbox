@@ -1,0 +1,21 @@
+\name{fitmod}
+\alias{fitmod}
+\title{Fit model tools.}
+\usage{
+  fitmod(data, equation, family = gaussian, gimme = "diag")
+}
+\arguments{
+  \item{data}{Data.frame to input}
+
+  \item{equation}{Model equation (e.g., y ~ x), not quoted}
+
+  \item{family}{Statistical distribution family. See
+  \code{family}}
+
+  \item{gimme}{What to return, one of df, diag, or
+  results.}
+}
+\description{
+  Fit model tools.
+}
+

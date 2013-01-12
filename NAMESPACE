@@ -1,5 +1,7 @@
 export(capwords)
 export(colClasses)
+export(fitmod)
+export(ggmoddiag)
 export(ggqqplot)
 export(knitpost)
 export(lakedata)

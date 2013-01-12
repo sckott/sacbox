@@ -14,6 +14,7 @@
 #' data(mtcars)
 #' mod <- lm(mpg ~ qsec, data=mtcars)
 #' ggmoddiag(mod, which=1:6, mfrow=c(3,2))
+#' @export
 ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), ...)
 {
 	df <- fortify(model)

@@ -1,3 +1,10 @@
+#' Fit model tools.
+#' 
+#' @param data Data.frame to input
+#' @param equation Model equation (e.g., y ~ x), not quoted
+#' @param family Statistical distribution family. See \code{family}
+#' @param gimme What to return, one of df, diag, or results.
+#' @export
 fitmod <- function(data, equation, family=gaussian, gimme="diag") {
 	gimme <- match.arg(gimme, choices=c("df","diag","results"))
 	
