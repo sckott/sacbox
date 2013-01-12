@@ -16,6 +16,9 @@ Collate:
     'lakedata.r'
     'write_fasta.r'
     'timetests.r'
+    'ggmoddiag.r'
+    'ggqqplot.r'
+    'fitmod.r'
 Depends:
     knitr,
     stringr,
