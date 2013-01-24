@@ -56,13 +56,19 @@ ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), ...
 # 		geom_abline(slope = slope, intercept = int, color="blue")	+
 # 		ggtitle("Normal Q-Q")
 	
-	# scale-location
-	g3 <- ggplot(df, aes(.fitted, sqrt(abs(.stdresid)))) +
-		toplot +
-		geom_smooth(se=FALSE, method="loess") +
-		scale_x_continuous("Fitted Values") +
-		scale_y_continuous("Root of Standardized Residuals") +
-		ggtitle("Scale-Location")
+# 	# scale-location
+# 	g3 <- ggplot(df, aes(.fitted, sqrt(abs(.stdresid)))) +
+# 		toplot +
+# 		geom_smooth(se=FALSE, method="loess") +
+# 		scale_x_continuous("Fitted Values") +
+# 		scale_y_continuous("Root of Standardized Residuals") +
+# 		ggtitle("Scale-Location")
+	
+	# histogram of residuals
+	g3 <- ggplot(df, aes(.resid)) +
+		geom_density() +
+		scale_y_continuous("Residuals") +
+		ggtitle("Residuals Histogram")
 	
 	# cook's distance
 	g4 <-  ggplot(df, aes(rows, .cooksd, ymin=0, ymax=.cooksd)) +

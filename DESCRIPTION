@@ -19,6 +19,7 @@ Collate:
     'ggmoddiag.r'
     'ggqqplot.r'
     'fitmod.r'
+    'req.r'
 Depends:
     knitr,
     stringr,
