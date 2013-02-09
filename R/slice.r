@@ -3,6 +3,7 @@
 #' @import plyr
 #' @param input Input character vector
 #' @param by Number by which to split the input character vector
+#' @export 
 slice <- function(input, by = 2, equalpiecesof = NULL) {
 	if(is.null(equalpiecesof)){	
 		starts <- seq(1, length(input), by)
