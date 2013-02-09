@@ -20,6 +20,7 @@ Collate:
     'ggqqplot.r'
     'fitmod.r'
     'req.r'
+    'slice.r'
 Depends:
     knitr,
     stringr,
