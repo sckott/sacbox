@@ -21,6 +21,7 @@ Collate:
     'fitmod.r'
     'req.r'
     'slice.r'
+    'cbind_fill.r'
 Depends:
     knitr,
     stringr,
