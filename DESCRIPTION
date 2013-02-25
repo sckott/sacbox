@@ -22,6 +22,7 @@ Collate:
     'req.r'
     'slice.r'
     'cbind_fill.r'
+    'merge_list.r'
 Depends:
     knitr,
     stringr,
