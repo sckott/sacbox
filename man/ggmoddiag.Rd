@@ -3,7 +3,7 @@
 \title{Plot model diagnostics in a grid, with inputs.}
 \usage{
   ggmoddiag(model, toplot = "points", which = c(1:3, 5),
-    mfrow = c(1, 1), ...)
+    mfrow = c(1, 1), returnwhat = "plots", ...)
 }
 \arguments{
   \item{model}{A model object, can be from lm() or glm()

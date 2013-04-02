@@ -23,6 +23,7 @@ Collate:
     'slice.r'
     'cbind_fill.r'
     'merge_list.r'
+    'myci.r'
 Depends:
     knitr,
     stringr,

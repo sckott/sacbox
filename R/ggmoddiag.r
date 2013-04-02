@@ -15,11 +15,16 @@
 #' mod <- lm(mpg ~ qsec, data=mtcars)
 #' ggmoddiag(mod, which=1:6, mfrow=c(3,2))
 #' @export
-ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), ...)
+ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), 
+											returnwhat = "plots", ...)
 {
 	df <- fortify(model)
 	df <- cbind(df, rows=1:nrow(df))
 	
+	if(!returnwhat == "plots"){
+		return(df)
+	} else
+	{
 	if(toplot == "points"){
 		toplot <- geom_point()
 	} else if(toplot == "labels")
@@ -45,24 +50,6 @@ ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), ...
 		scale_x_continuous("Theoretical Quantiles") +
 		scale_y_continuous("Standardized Residuals") +
 		ggtitle("Normal Q-Q")
-	
-# 	y <- quantile(df$.stdresid[!is.na(df$.stdresid)], c(0.25, 0.75))
-# 	x <- qnorm(c(0.25, 0.75))
-# 	slope <- diff(y)/diff(x)
-# 	int <- y[1L] - slope * x[1L]
-# 	g2 <- ggplot(df, aes(sample=.resid)) +
-# 		theme_bw(base_size=18) +
-# 		geom_point(stat = "qq", size=5) +
-# 		geom_abline(slope = slope, intercept = int, color="blue")	+
-# 		ggtitle("Normal Q-Q")
-	
-# 	# scale-location
-# 	g3 <- ggplot(df, aes(.fitted, sqrt(abs(.stdresid)))) +
-# 		toplot +
-# 		geom_smooth(se=FALSE, method="loess") +
-# 		scale_x_continuous("Fitted Values") +
-# 		scale_y_continuous("Root of Standardized Residuals") +
-# 		ggtitle("Scale-Location")
 	
 	# histogram of residuals
 	g3 <- ggplot(df, aes(.resid)) +
@@ -119,5 +106,6 @@ ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), ...
 		formatter()
 		print(plots[[i]], vp=viewport(layout.pos.row=mypos[j,][1], layout.pos.col=mypos[j,][2]))
 		j <- j+1
+	}
 	}
 }
