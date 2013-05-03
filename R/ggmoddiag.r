@@ -40,33 +40,44 @@ ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1),
 		ggtitle("Residuals vs Fitted")
 	
 	# normal qq	
-	a <- quantile(df$.stdresid, c(0.25, 0.75))
-	b <- qnorm(c(0.25, 0.75))
-	slope <- diff(a)/diff(b)
-	int <- a[1] - slope * b[1]
+# 	a <- quantile(df$.stdresid, c(0.25, 0.75))
+# 	b <- qnorm(c(0.25, 0.75))
+# 	slope <- diff(a)/diff(b)
+# 	int <- a[1] - slope * b[1]
 	g2 <- ggplot(df, aes(sample=.resid)) +
 		stat_qq() +
-		geom_abline(slope=slope, intercept=int) +
+# 		geom_abline(slope=slope, intercept=int) +
 		scale_x_continuous("Theoretical Quantiles") +
 		scale_y_continuous("Standardized Residuals") +
 		ggtitle("Normal Q-Q")
 	
-	# histogram of residuals
-	g3 <- ggplot(df, aes(.resid)) +
-		geom_density() +
+	# histogram of response variable
+  df2 <- df
+  names(df2)[1] <- "responsevar"
+	g3 <- ggplot(df2, aes(x=responsevar)) +
+	  geom_histogram() +
+	  scale_y_continuous("Response variable") +
+	  ggtitle("Response Variable Histogram")
+
+  # histogram of residuals
+	g4 <- 
+  ggplot(df, aes(.resid)) +
+		geom_histogram() +
 		scale_y_continuous("Residuals") +
 		ggtitle("Residuals Histogram")
 	
 	# cook's distance
-	g4 <-  ggplot(df, aes(rows, .cooksd, ymin=0, ymax=.cooksd)) +
+	horizline <- 4/length(model$residuals)
+	g5 <- ggplot(df, aes(rows, .cooksd, ymin=0, ymax=.cooksd)) +
 		toplot + 
 		geom_linerange() +
+	  geom_hline(y=horizline, linetype=2) + 
 		scale_x_continuous("Observation Number") +
 		scale_y_continuous("Cook's distance") +
 		ggtitle("Cook's Distance")
 	
 	# residuals vs leverage
-	g5 <- ggplot(df, aes(.hat, .stdresid)) +
+	g6 <- ggplot(df, aes(.hat, .stdresid)) +
 		toplot +
 		geom_smooth(se=FALSE, method="loess") +
 		geom_hline(linetype=2, size=.2) +
@@ -75,13 +86,13 @@ ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1),
 		ggtitle("Residuals vs Leverage")
 		
 	# cooksd vs leverage
-	g6 <- ggplot(df, aes(.hat, .cooksd)) +
-		toplot +
-		geom_smooth(se=FALSE, method="loess") +
-		scale_x_continuous("Leverage") +
-		scale_y_continuous("Cook's distance") +
-		ggtitle("Cook's dist vs Leverage")
-	
+# 	g6 <- ggplot(df, aes(.hat, .cooksd)) +
+# 		toplot +
+# 		geom_smooth(se=FALSE, method="loess") +
+# 		scale_x_continuous("Leverage") +
+# 		scale_y_continuous("Cook's distance") +
+# 		ggtitle("Cook's dist vs Leverage")
+# 	
 	plots <- list(g1, g2, g3, g4, g5, g6)
 	
 	# making the plots
