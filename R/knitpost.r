@@ -10,12 +10,12 @@
 #' knitpost("/Users/ScottMac/github/SChamberlain/schamberlain.github.com/_drafts/2012-07-20-global-names-resolver.Rmd")
 #' }
 #' @export
-knitpost <- function(input, base.url = "/") 
+knitpost <- function(input, output="~/github/sac/schamberlain.github.com/_posts/", base.url = "/") 
 {
 	opts_knit$set(base.url = base.url)
 	fig.path <- paste0("img/", sub(".Rmd$", "", basename(input)), "/")
 	opts_chunk$set(fig.path = fig.path)
 	opts_chunk$set(fig.cap = "center")
 	render_jekyll()
-	knit(input, envir = parent.frame())
+	knit(paste0('~/github/sac/schamberlain.github.com/_drafts/',input), output = paste0(output,sub('Rmd','md',input)), envir = parent.frame())
 }

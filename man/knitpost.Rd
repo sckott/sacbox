@@ -2,7 +2,9 @@
 \alias{knitpost}
 \title{Prepare a markdown post for jekyll.}
 \usage{
-  knitpost(input, base.url = "/")
+  knitpost(input,
+    output = "~/github/sac/schamberlain.github.com/_posts",
+    base.url = "/")
 }
 \arguments{
   \item{input}{The url for the markdown file, including the
