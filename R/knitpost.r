@@ -17,5 +17,10 @@ knitpost <- function(input, output="~/github/sac/schamberlain.github.com/_posts/
 	opts_chunk$set(fig.path = fig.path)
 	opts_chunk$set(fig.cap = "center")
 	render_jekyll()
-	knit(paste0('~/github/sac/schamberlain.github.com/_drafts/',input), output = paste0(output,sub('Rmd','md',input)), envir = parent.frame())
+  fname <- paste0('~/github/sac/schamberlain.github.com/_drafts/',input)
+	knit(fname, 
+       output = paste0(output,sub('Rmd','md',input)), 
+       envir = parent.frame())
+# 	system(paste0("sed -i.bak '1,2d' ", fname, " > ", fname))
+# 	system(paste0("sed -i.bak '1d' ", paste0(output,sub('Rmd','md',input))))
 }
