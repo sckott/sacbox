@@ -25,6 +25,7 @@ Collate:
     'merge_list.r'
     'myci.r'
     'modfit_fixed_only.r'
+    'vecrep.r'
 Depends:
     knitr,
     stringr,

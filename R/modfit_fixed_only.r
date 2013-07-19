@@ -8,7 +8,7 @@
 #' modfit_fixed_only(data=iris, equation=mod1, gimme="diag")
 #' @export
 modfit_fixed_only <- function(data, equation=NULL, gimme="diag") {  
-  gimme <- match.arg(gimme, choices=c("df","diag","results","fit"))
+  gimme <- match.arg(gimme, choices=c("df","diag","results","fit","slopes"))
   
   conn_mod1 <- lm(equation, data=data)
   m1 <- fortify(conn_mod1, data)
@@ -32,6 +32,12 @@ modfit_fixed_only <- function(data, equation=NULL, gimme="diag") {
     temp$vars <- row.names(temp)
     row.names(temp) <- NULL
     temp
-  } 
-  else { conn_mod1 } 
+  } else
+    if(gimme=="slopes"){ 
+      xx <- data.frame(summary(conn_mod1)$coefficients)
+      xx$vars <- row.names(xx)
+      row.names(xx) <- NULL
+      xx
+    } else 
+      { conn_mod1 } 
 }

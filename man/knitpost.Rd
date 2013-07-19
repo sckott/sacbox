@@ -3,7 +3,7 @@
 \title{Prepare a markdown post for jekyll.}
 \usage{
   knitpost(input,
-    output = "~/github/sac/schamberlain.github.com/_posts",
+    output = "~/github/sac/schamberlain.github.com/_posts/",
     base.url = "/")
 }
 \arguments{
