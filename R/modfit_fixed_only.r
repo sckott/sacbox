@@ -1,5 +1,6 @@
 #' Fit model tools.
 #' 
+#' @importFrom gridExtra grid.arrange
 #' @param data Data.frame to input
 #' @param equation Model equation (e.g., y ~ x), not quoted
 #' @param gimme What to return, one of df, diag, or results.

@@ -26,9 +26,12 @@ Collate:
     'myci.r'
     'modfit_fixed_only.r'
     'vecrep.r'
-Depends:
+Imports:
     knitr,
     stringr,
     plyr,
+    reshape,
     RCurl,
-    XML
+    XML,
+    ggplot2,
+    phytools

@@ -1,6 +1,5 @@
 #' Simulate traits on each tree.
 #' 
-#' @import plyr
 #' @importFrom phytools fastBM
 #' @param trees List of phylogenetic trees in "phylo" format. 
 #' @param numtraits Number of traits to create.
@@ -18,8 +17,8 @@
 ## tr2: trait that prvents ineractions with some species, e.g., tongue length  
 simtraits <- function (trees, numtraits, method) 
 { 
-  trait1 <- llply(trees, method)
-  trait2 <- llply(trees, method)
+  trait1 <- lapply(trees, method)
+  trait2 <- lapply(trees, method)
   
   replicate( 2, lapply(trees, method) , simplify = FALSE )
  	

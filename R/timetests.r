@@ -1,6 +1,7 @@
 #' Get run times for all tests in a package. 
 #' 
-#' @import reshape plyr
+#' @importFrom reshape sort_df
+#' @importFrom plyr ldply
 #' @param dir Path to the directory that contains the tests. 
 #' @return A data.frame sorted by elapsed run time for each test so that you can 
 #' 		easily pick out the offending tests that are taking a long time.

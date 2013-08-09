@@ -1,10 +1,12 @@
 #' Replace many elements in a vector at the same time
+#' @param vec A vector
+#' @param from From what
+#' @param to To what
+#' @export
 #' @examples
 #' countries <- c('United States', 'Ecuador', 'Russia', 'Russia', 'Ecuador')
-#' vecrep(vec=countries, mapping=list(c('Ecuador', 'Russia', 'United States'), c('ECU', 'RUS', 'USA')))
-vecrep <- function (vec, mapping) 
-{
-  mapped <- data.frame(mapping)
-  names(mapped) <- c("a","b")
-  mapped$b[match(vec, mapped$a)]
+#' vecrep(vec=countries, from=c('Ecuador', 'Russia', 'United States'), to=c('ECU', 'RUS', 'USA'))
+vecrep <- function (vec, from, to) 
+{ 
+  to[match(vec, from)]
 }

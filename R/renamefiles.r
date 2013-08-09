@@ -2,7 +2,7 @@
 #' 
 #' For example, a file name may have spaces, and you can replace them with "_".
 #' 
-#' @import plyr stringr
+#' @importFrom plyr l_ply
 #' @param dir Path to directory for which you want to change the file names.
 #' @param pattern Pattern in file name to replace.
 #' @param replacement Text to replace pattern with.
@@ -19,7 +19,7 @@ renamefiles <- function(dir, pattern, replacement){
   setwd(dir)
   
   rename_ <- function(x) {
-    file.rename(x, str_replace_all(x, pattern, replacement))
+    file.rename(x, gsub(pattern, replacement, x))
   }
   
   files <- dir(full.names=T)
