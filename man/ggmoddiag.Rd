@@ -2,8 +2,8 @@
 \alias{ggmoddiag}
 \title{Plot model diagnostics in a grid, with inputs.}
 \usage{
-  ggmoddiag(model, toplot = "points", which = c(1:3, 5),
-    mfrow = c(1, 1), returnwhat = "plots", ...)
+ggmoddiag(model, toplot = "points", which = c(1:3, 5), mfrow = c(1, 1),
+  returnwhat = "plots", ...)
 }
 \arguments{
   \item{model}{A model object, can be from lm() or glm()
@@ -20,11 +20,11 @@
   \item{...}{Passed on to somewhere...}
 }
 \description{
-  Plot model diagnostics in a grid, with inputs.
+Plot model diagnostics in a grid, with inputs.
 }
 \details{
-  Modified from
-  \link{http://librestats.com/2012/06/11/autoplot-graphical-methods-with-ggplot2/}
+Modified from
+\link{http://librestats.com/2012/06/11/autoplot-graphical-methods-with-ggplot2/}
 }
 \examples{
 library(ggplot2)

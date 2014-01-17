@@ -2,7 +2,7 @@
 \alias{modfit_fixed_only}
 \title{Fit model tools.}
 \usage{
-  modfit_fixed_only(data, equation = NULL, gimme = "diag")
+modfit_fixed_only(data, equation = NULL, gimme = "diag")
 }
 \arguments{
   \item{data}{Data.frame to input}
@@ -13,7 +13,7 @@
   results.}
 }
 \description{
-  Fit model tools.
+Fit model tools.
 }
 \examples{
 mod1 <- lm(Sepal.Length ~ Petal.Width * Species, data=iris)

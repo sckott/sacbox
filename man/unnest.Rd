@@ -2,16 +2,16 @@
 \alias{unnest}
 \title{Unnest a nested list.}
 \usage{
-  unnest(x)
+unnest(x)
 }
 \arguments{
   \item{x}{A nested list.}
 }
 \value{
-  A list, with no nesting, hopefully.
+A list, with no nesting, hopefully.
 }
 \description{
-  Unnest a nested list.
+Unnest a nested list.
 }
 \examples{
 \dontrun{
@@ -29,7 +29,7 @@ unnest(mylist_)[[1]]
 }
 }
 \author{
-  Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{list}
 \keyword{nested}

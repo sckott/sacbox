@@ -2,7 +2,7 @@
 \alias{fitmod}
 \title{Fit model tools.}
 \usage{
-  fitmod(data, equation, family = gaussian, gimme = "diag")
+fitmod(data, equation, family = gaussian, gimme = "diag")
 }
 \arguments{
   \item{data}{Data.frame to input}
@@ -16,6 +16,6 @@
   results.}
 }
 \description{
-  Fit model tools.
+Fit model tools.
 }
 

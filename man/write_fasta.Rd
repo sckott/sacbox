@@ -3,7 +3,7 @@
 \title{Write a fasta file to directory to use for whatever, e.g., running Clustal
 		for multiple sequences alignment.}
 \usage{
-  write_fasta(sequences, fileout, format = "bayesian")
+write_fasta(sequences, fileout, format = "bayesian")
 }
 \arguments{
   \item{sequences}{A list of sequences.}
@@ -14,8 +14,8 @@
   likelihood).}
 }
 \description{
-  Write a fasta file to directory to use for whatever,
-  e.g., running Clustal for multiple sequences alignment.
+Write a fasta file to directory to use for whatever, e.g.,
+running Clustal for multiple sequences alignment.
 }
 \examples{
 \dontrun{

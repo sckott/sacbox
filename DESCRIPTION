@@ -6,26 +6,6 @@ Date: 06-30-12
 License: CC0
 Author: Scott Chamberlain
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
-Collate:
-    'unnest.r'
-    'colClasses.r'
-    'renamefiles.r'
-    'knitpost.r'
-    'capwords.r'
-    'simtraits.r'
-    'lakedata.r'
-    'write_fasta.r'
-    'timetests.r'
-    'ggmoddiag.r'
-    'ggqqplot.r'
-    'fitmod.r'
-    'req.r'
-    'slice.r'
-    'cbind_fill.r'
-    'merge_list.r'
-    'myci.r'
-    'modfit_fixed_only.r'
-    'vecrep.r'
 Imports:
     knitr,
     stringr,

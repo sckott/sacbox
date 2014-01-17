@@ -2,7 +2,7 @@
 \alias{colClasses}
 \title{Coerces data.frame columns to the specified classes}
 \usage{
-  colClasses(d, colClasses)
+colClasses(d, colClasses)
 }
 \arguments{
   \item{d}{A data.frame.}
@@ -11,7 +11,7 @@
   numeric, factor, character, etc.}
 }
 \description{
-  Coerces data.frame columns to the specified classes
+Coerces data.frame columns to the specified classes
 }
 \examples{
 dat <- data.frame(xvar = seq(1:10), yvar = rep(c("a","b"),5)) # make a data.frame

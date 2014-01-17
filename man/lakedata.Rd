@@ -2,16 +2,16 @@
 \alias{lakedata}
 \title{Search for taxonomy data from Plantminer.com}
 \usage{
-  lakedata(lakenumber)
+lakedata(lakenumber)
 }
 \arguments{
   \item{lakenumber}{Number of the Minnesota DNR lake.}
 }
 \value{
-  data.frame of results.
+data.frame of results.
 }
 \description{
-  Search for taxonomy data from Plantminer.com
+Search for taxonomy data from Plantminer.com
 }
 \examples{
 \dontrun{

@@ -2,14 +2,14 @@
 \alias{ggqqplot}
 \title{Make a q-q plot for model diagnostics}
 \usage{
-  ggqqplot(model)
+ggqqplot(model)
 }
 \arguments{
   \item{model}{A model object, can be from lm() or glm()
   call I think.}
 }
 \description{
-  Make a q-q plot for model diagnostics
+Make a q-q plot for model diagnostics
 }
 \examples{
 library(ggplot2)

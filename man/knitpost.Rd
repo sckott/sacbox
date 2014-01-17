@@ -2,9 +2,8 @@
 \alias{knitpost}
 \title{Prepare a markdown post for jekyll.}
 \usage{
-  knitpost(input,
-    output = "~/github/sac/schamberlain.github.com/_posts/",
-    base.url = "/")
+knitpost(input, output = "~/github/sac/sckott.github.com/_posts/",
+  base.url = "/")
 }
 \arguments{
   \item{input}{The url for the markdown file, including the
@@ -13,8 +12,8 @@
   \item{base.url}{Leave as default.}
 }
 \description{
-  Modified very slightly from
-  http://jfisher-usgs.github.com/r/2012/07/03/knitr-jekyll/.
+Modified very slightly from
+http://jfisher-usgs.github.com/r/2012/07/03/knitr-jekyll/.
 }
 \examples{
 \dontrun{

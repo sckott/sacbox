@@ -2,7 +2,7 @@
 \alias{vecrep}
 \title{Replace many elements in a vector at the same time}
 \usage{
-  vecrep(vec, from, to)
+vecrep(vec, from, to)
 }
 \arguments{
   \item{vec}{A vector}
@@ -12,7 +12,7 @@
   \item{to}{To what}
 }
 \description{
-  Replace many elements in a vector at the same time
+Replace many elements in a vector at the same time
 }
 \examples{
 countries <- c('United States', 'Ecuador', 'Russia', 'Russia', 'Ecuador')
