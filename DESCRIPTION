@@ -13,5 +13,4 @@ Imports:
     reshape,
     RCurl,
     XML,
-    ggplot2,
-    phytools
+    ggplot2
