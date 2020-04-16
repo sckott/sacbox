@@ -1,16 +1,21 @@
 Package: sacbox
-Description: R functions commonly used.
+Description: R functions commonly used by me.
 Title: sacbox
-Version: 0.0.0
-Date: 06-30-12
-License: CC0
+Version: 0.1.0
+License: MIT
 Author: Scott Chamberlain
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Encoding: UTF-8
 Imports:
+    devtools,
+    usethis,
     knitr,
     stringr,
     plyr,
     reshape,
     RCurl,
     XML,
-    ggplot2
+    ggplot2,
+    gridExtra,
+    phytools
+RoxygenNote: 7.1.0
