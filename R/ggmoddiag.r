@@ -9,11 +9,12 @@
 #' @param ... Passed on to somewhere...
 #' @details
 #' 		Modified from \link{http://librestats.com/2012/06/11/autoplot-graphical-methods-with-ggplot2/}
-#' @examples
+#' @examples \dontrun{
 #' library(ggplot2)
 #' data(mtcars)
 #' mod <- lm(mpg ~ qsec, data=mtcars)
 #' ggmoddiag(mod, which=1:6, mfrow=c(3,2))
+#' }
 #' @export
 ggmoddiag <- function(model, toplot="points", which=c(1:3, 5), mfrow=c(1,1), 
 											returnwhat = "plots", ...)

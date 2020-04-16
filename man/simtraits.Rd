@@ -25,6 +25,8 @@ You can specify how many traits you would like to create. One trait output
 		will always be abundance ('abd').
 }
 \examples{
+\dontrun{
 trees <- replicate(10, rcoal(10), simplify=F) # simulate trees
 simtraits(trees = trees, numtraits = 2, method = "fastBM")
+}
 }

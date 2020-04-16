@@ -33,8 +33,10 @@ Plot model diagnostics in a grid, with inputs.
 Modified from \link{http://librestats.com/2012/06/11/autoplot-graphical-methods-with-ggplot2/}
 }
 \examples{
+\dontrun{
 library(ggplot2)
 data(mtcars)
 mod <- lm(mpg ~ qsec, data=mtcars)
 ggmoddiag(mod, which=1:6, mfrow=c(3,2))
+}
 }

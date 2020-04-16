@@ -1,21 +1,27 @@
 Package: sacbox
 Description: R functions commonly used by me.
 Title: sacbox
-Version: 0.1.0
-License: MIT
+Version: 0.2.0
+License: MIT + file LICENSE
 Author: Scott Chamberlain
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 Encoding: UTF-8
 Imports:
     devtools,
     usethis,
+    gh,
     knitr,
-    stringr,
-    plyr,
     reshape,
+    plyr,
     RCurl,
     XML,
     ggplot2,
     gridExtra,
-    phytools
+    phytools,
+    cli,
+    crayon,
+    gert,
+    desc,
+    rlang,
+    sys
 RoxygenNote: 7.1.0

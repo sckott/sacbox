@@ -2,11 +2,12 @@
 #' 
 #' @import ggplot2
 #' @param model A model object, can be from lm() or glm() call I think. 
-#' @examples
+#' @examples \dontrun{
 #' library(ggplot2)
 #' data(mtcars)
 #' mod <- lm(mpg ~ qsec, data=mtcars)
 #' ggqqplot(mod)
+#' }
 #' @export
 ggqqplot <- function(model)
 {

@@ -13,8 +13,10 @@ ggqqplot(model)
 Make a q-q plot for model diagnostics
 }
 \examples{
+\dontrun{
 library(ggplot2)
 data(mtcars)
 mod <- lm(mpg ~ qsec, data=mtcars)
 ggqqplot(mod)
+}
 }
