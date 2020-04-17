@@ -9,6 +9,7 @@ scott_release <- function() {
   scott_release_cleanup()
   scott_release_git_tag()
   scott_release_publish_release()
+  Sys.sleep(1) # sleep for 1 sec to wait a bit for email to come in
   scott_release_fetch_cran_email()
 }
 

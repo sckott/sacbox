@@ -13,8 +13,12 @@ fetch_cran_email <- function(pkg = ".") {
 }
 
 fetch_url <- function(id) {
-  if (length(id) > 1) {
-    base::message("more than one gmail thread found, go to email yourself")
+  if (length(id) == 0) {
+    cli::cat_line(
+      crayon::bgBlue("zero gmail threads found, email may not be ready yet"))
+  } else if (length(id) > 1) {
+    cli::cat_line(
+      crayon::bgBlue("more than one gmail thread found, go to email yourself"))
   } else {
     mssg <- gmailr::gm_message(id)
     subject <- gmailr::gm_subject(mssg)
@@ -22,7 +26,8 @@ fetch_url <- function(id) {
     pat <- 
     'https?://xmpalantir\\.wu\\.ac\\.at\\/cransubmit\\/conf_mail\\.php\\?code=[0-9A-Za-z]+'
     submit_url <- strextract(body, pat)
-    base::message("submission link: ", submit_url)
+    cli::cat_line(
+      crayon::yellow("submission link: ", submit_url))
   }
 }
 
