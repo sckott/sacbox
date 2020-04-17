@@ -9,6 +9,7 @@ scott_release <- function() {
   scott_release_cleanup()
   scott_release_git_tag()
   scott_release_publish_release()
+  scott_release_fetch_cran_email()
 }
 
 #' @export
@@ -40,4 +41,11 @@ scott_release_git_tag <- function() {
 scott_release_publish_release <- function() {
   cli::cat_line(crayon::blue("creating new github release"))
   gh_release()
+}
+
+#' @export
+#' @rdname release
+scott_release_fetch_cran_email <- function() {
+  cli::cat_line(crayon::blue("fetching cran submission link from gmail"))
+  fetch_cran_email()
 }

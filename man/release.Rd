@@ -7,6 +7,7 @@
 \alias{scott_release_cleanup}
 \alias{scott_release_git_tag}
 \alias{scott_release_publish_release}
+\alias{scott_release_fetch_cran_email}
 \title{Release to cran steps}
 \usage{
 scott_release()
@@ -18,6 +19,8 @@ scott_release_cleanup()
 scott_release_git_tag()
 
 scott_release_publish_release()
+
+scott_release_fetch_cran_email()
 }
 \description{
 Release to cran steps

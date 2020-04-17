@@ -1,7 +1,7 @@
 Package: sacbox
 Description: R functions commonly used by me.
 Title: sacbox
-Version: 0.2.0
+Version: 0.3.0
 License: MIT + file LICENSE
 Author: Scott Chamberlain
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
@@ -23,5 +23,6 @@ Imports:
     gert,
     desc,
     rlang,
-    sys
+    sys,
+    gmailr
 RoxygenNote: 7.1.0
