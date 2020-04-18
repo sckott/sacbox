@@ -11,6 +11,8 @@
 #' @importFrom desc desc_get_version
 #' @importFrom rlang seq2
 #' @importFrom sys exec_wait
+#' @importFrom crul HttpClient
+#' @importFrom jsonlite fromJSON
 #' @name sacbox-package
 #' @aliases sacbox
 #' @docType package

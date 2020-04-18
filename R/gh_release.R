@@ -1,3 +1,5 @@
+sr <- new.env()
+
 #' @export
 #' @note modified from usethis::use_github_release
 gh_release <- function() {
@@ -18,5 +20,6 @@ gh_release <- function() {
     body = news,
     draft = FALSE, .api_url = NULL,
     .token = Sys.getenv("GITHUB_PAT_CRAN_SUBMIT"))
+  sr$release_url <- release$html_url
   usethis:::view_url(release$html_url)
 }

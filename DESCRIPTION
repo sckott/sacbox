@@ -14,6 +14,8 @@ Imports:
     reshape,
     plyr,
     RCurl,
+    crul,
+    jsonlite,
     XML,
     ggplot2,
     gridExtra,
