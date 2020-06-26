@@ -1,17 +1,19 @@
 #' Release to cran steps
 #' @name release
+#' @param sleep (integer) number of seconds to sleep before trying to
+#' fetch the cran email with submission link. default: 1L
 #' @examples
 #' # scott_release()
 
 #' @export
-scott_release <- function() {
+scott_release <- function(sleep = 1L) {
   scott_release_submit()
   scott_release_cleanup()
   scott_release_git_tag()
   scott_release_publish_release()
   cli::cat_line(crayon::blue("adding a Todoist to do item"))
   todoist_add_item()
-  Sys.sleep(1) # sleep for 1 sec to wait a bit for email to come in
+  Sys.sleep(sleep) # sleep for 1 sec to wait a bit for email to come in
   scott_release_fetch_cran_email()
 }
 

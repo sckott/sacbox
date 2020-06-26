@@ -10,7 +10,7 @@
 \alias{scott_release_fetch_cran_email}
 \title{Release to cran steps}
 \usage{
-scott_release()
+scott_release(sleep = 1L)
 
 scott_release_submit()
 
@@ -21,6 +21,10 @@ scott_release_git_tag()
 scott_release_publish_release()
 
 scott_release_fetch_cran_email()
+}
+\arguments{
+\item{sleep}{(integer) number of seconds to sleep before trying to
+fetch the cran email with submission link. default: 1L}
 }
 \description{
 Release to cran steps
