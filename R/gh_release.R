@@ -19,7 +19,7 @@ gh_release <- function() {
     name = paste0(package$Package, " v", package$Version),
     body = news,
     draft = FALSE, .api_url = NULL,
-    .token = Sys.getenv("GITHUB_PAT_CRAN_SUBMIT"))
+    .token = Sys.getenv("GITHUB_PAT_ROSTATS"))
   sr$release_url <- release$html_url
   usethis:::view_url(release$html_url)
 }
