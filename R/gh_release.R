@@ -3,7 +3,7 @@ sr <- new.env()
 #' @export
 #' @note modified from usethis::use_github_release
 gh_release <- function() {
-  usethis:::check_uses_github()
+  # usethis:::check_uses_github()
   path <- usethis::proj_path("NEWS.md")
   if (!file.exists(path)) {
     usethis::ui_stop("{usethis::ui_path('NEWS.md')} not found")
