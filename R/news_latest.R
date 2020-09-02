@@ -8,7 +8,11 @@ get_news <- function(lines) {
   # latest version
   versions <- which(grepl("=+", lines))
   # news lines for latest version
-  news <- lines[rlang::seq2(versions[1] + 2, versions[2] - 2)]
+  if (length(versions) == 1) {
+    news <- lines[rlang::seq2(versions[1] + 2, length(lines))]
+  } else {
+    news <- lines[rlang::seq2(versions[1] + 2, versions[2] - 2)]
+  }
   # Remove leading and trailing empty lines
   text <- which(news != "")
   if (length(text) == 0) return("")
